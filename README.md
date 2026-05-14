@@ -2,6 +2,7 @@
 Simple Single Neuron Neural Network
 
 * [Gradient Descent from Scratch](https://github.com/eniompw/SimpleNeuralNet/blob/main/Gradient_Descent_from_Scratch.ipynb)
+* [Linear Regression Explanation](./Linear_Regression_from_Scratch.md) - Detailed explanation of the gradient descent code
 
 ### Key Libraries
 * matplotlib histogram & scatter
