@@ -1,4 +1,4 @@
-# Simple Neural Net
+# Linear Regression with Gradient Descent
 
 A collection of notebooks and scripts demonstrating the fundamentals of a Simple Single-Neuron Neural Network, focusing on Linear Regression and Gradient Descent from scratch.
 
