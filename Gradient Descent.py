@@ -1,12 +1,21 @@
 import numpy as np
 
+# --------------------
+# Data
+# --------------------
 n = 30              # number of data points
 x = np.arange(n)    # Create x values: [0, 1, 2, ..., 29]
 y = 2 * x + 50      # True relationship: y = 2x + 50
 
+# --------------------
+# Model
+# --------------------
 w = 0.1   # weight (slope) - initialized to 0.1
 b = 0.01  # bias (intercept) - initialized to 0.01
 
+# --------------------
+# Training
+# --------------------
 lr = 0.0001  # learning rate
 
 for i in range(50000):
@@ -21,5 +30,8 @@ for i in range(50000):
   w = w - lr * dw
   b = b - lr * db
 
+# --------------------
+# Output
+# --------------------
 print("weight:" , w)
 print("bias:" , b)
