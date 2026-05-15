@@ -10,8 +10,8 @@ y = 2 * x + 50      # True relationship: y = 2x + 50
 # --------------------
 # Model
 # --------------------
-w = 0.1   # weight (slope) - initialized to 0.1
-b = 0.01  # bias (intercept) - initialized to 0.01
+w = 0   # weight (slope)
+b = 0  # bias (intercept)
 
 # --------------------
 # Training
