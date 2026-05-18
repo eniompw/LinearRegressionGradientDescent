@@ -19,7 +19,7 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 
 ## 🔗 References
 
-* [Regression from Scratch Example](https://www.kaggle.com/code/aakashns/pytorch-basics-linear-regression-from-scratch) (Kaggle)
+* [Regression from Scratch Example](https://web.archive.org/web/20240301022512/https://www.kaggle.com/code/aakashns/pytorch-basics-linear-regression-from-scratch) (Kaggle)
 * [Gradient Descent in Python](https://www.geeksforgeeks.org/how-to-implement-a-gradient-descent-in-python-to-find-a-local-minimum) (GeeksforGeeks)
-* [Gradient Derivative Calculation](https://towardsdatascience.com/gradient-descent-from-scratch-e8b75fa986cc) (Towards Data Science)
+* [Gradient Derivative Calculation](https://web.archive.org/web/20220419231100/https://towardsdatascience.com/gradient-descent-from-scratch-e8b75fa986cc?gi=2fc7792409a4) (Towards Data Science)
 
