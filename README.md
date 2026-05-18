@@ -13,6 +13,10 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 
 * `matplotlib` - For histogram and scatter plot visualizations.
 
+## 🔗 Related Repositories
+
+* [MLP Digits Classifier](https://github.com/eniompw/MLP-Digits-Classifier) - Builds on this project with a Multi-Layer Perceptron for digit classification.
+
 ## 🔗 References
 
 * [Regression from Scratch Example](https://www.kaggle.com/code/aakashns/pytorch-basics-linear-regression-from-scratch) (Kaggle)
