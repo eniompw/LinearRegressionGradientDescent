@@ -9,6 +9,10 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 * [Linear Regression Gradient Descent](./Linear_Regression_Gradient_Descent.py) - Basic Python implementation using raw inputs.
 * [Linear Regression Normalised](./Linear_Regression_Gradient_Descent_Normalised.py) - Implementation with normalized inputs for more stable and faster convergence.
 
+> **Note 1:** Removing the learning rate (`lr`) causes `dw` and `db` to explode, resulting in `y_hat` becoming `NaN` and training failing completely.
+>
+> **Note 2:** Normalising the inputs reduces the required epochs from 50,000 to 1,000, making training 50x faster.
+
 ## 🛠️ Key Libraries
 
 * `matplotlib` - For histogram and scatter plot visualizations.
