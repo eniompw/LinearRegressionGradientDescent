@@ -2,6 +2,8 @@
 
 A collection of notebooks and scripts demonstrating the fundamentals of a Simple Single-Neuron Neural Network, focusing on Linear Regression and Gradient Descent from scratch.
 
+> Followed on by [MLP Digits Classifier](https://github.com/eniompw/MLP-Digits-Classifier), extending gradient descent from a single-output linear model to a multi-class neural network.
+
 ## 📚 Contents
 
 * [Gradient Descent from Scratch](./linreg_gd.ipynb) - Jupyter Notebook exploring the implementation step-by-step.
@@ -16,10 +18,6 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 ## 🛠️ Key Libraries
 
 * `matplotlib` - For histogram and scatter plot visualizations.
-
-## 🔗 Related Repositories
-
-* [MLP Digits Classifier](https://github.com/eniompw/MLP-Digits-Classifier) - Builds on this project with a Multi-Layer Perceptron for digit classification.
 
 ## 🔗 References
 
