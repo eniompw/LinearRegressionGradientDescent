@@ -4,10 +4,10 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 
 ## 📚 Contents
 
-* [Gradient Descent from Scratch](./Gradient_Descent_from_Scratch.ipynb) - Jupyter Notebook exploring the implementation step-by-step.
-* [Linear Regression Explanation](./Linear_Regression_from_Scratch.md) - Detailed explanation of the underlying gradient descent code and math.
-* [Linear Regression Gradient Descent](./Linear_Regression_Gradient_Descent.py) - Basic Python implementation using raw inputs.
-* [Linear Regression Normalised](./Linear_Regression_Gradient_Descent_Normalised.py) - Implementation with normalized inputs for more stable and faster convergence.
+* [Gradient Descent from Scratch](./linreg_gd.ipynb) - Jupyter Notebook exploring the implementation step-by-step.
+* [Linear Regression Explanation](./linreg_notes.md) - Detailed explanation of the underlying gradient descent code and math.
+* [Linear Regression Gradient Descent](./linreg_gd.py) - Basic Python implementation using raw inputs.
+* [Linear Regression Normalised](./linreg_gd_norm.py) - Implementation with normalized inputs for more stable and faster convergence.
 
 > **Note 1:** Removing the learning rate (`lr`) causes `dw` and `db` to explode, resulting in `y_hat` becoming `NaN` and training failing completely.
 >
