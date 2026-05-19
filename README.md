@@ -11,6 +11,17 @@ A collection of notebooks and scripts demonstrating the fundamentals of a Simple
 * [Linear Regression Gradient Descent](./linreg_gd.py) - Basic Python implementation using raw inputs.
 * [Linear Regression Normalised](./linreg_gd_norm.py) - Implementation with normalized inputs for more stable and faster convergence.
 
+## How It Works
+
+1. **Data** — Generates 30 points following `y = 2x + 50` using `np.arange`.
+2. **Initialisation** — Weight `w` and bias `b` start at 0; learning rate `lr = 0.0001`.
+3. **Forward pass** — Computes predictions: `y_hat = w * x + b`.
+4. **Gradients** — Calculates partial derivatives of Mean Squared Error (MSE) loss with respect to `w` and `b`.
+5. **Update** — Subtracts `lr * gradient` from each parameter, nudging them toward lower loss.
+6. **Result** — After 50,000 epochs, the model recovers `w ≈ 2` and `b ≈ 50`.
+
+See [linreg_notes.md](./linreg_notes.md) for a detailed breakdown of the math and code.
+
 > **Note 1:** Removing the learning rate (`lr`) causes `dw` and `db` to explode, resulting in `y_hat` becoming `NaN` and training failing completely.
 >
 > **Note 2:** Normalising the inputs reduces the required epochs from 50,000 to 1,000, making training 50x faster.
