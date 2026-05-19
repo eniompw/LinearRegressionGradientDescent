@@ -2,6 +2,8 @@
 
 A collection of notebooks and scripts demonstrating the fundamentals of a Simple Single-Neuron Neural Network, focusing on Linear Regression and Gradient Descent from scratch.
 
+No deep learning frameworks — just NumPy and a clean implementation of forward pass and gradient descent.
+
 > Followed on by [MLP Digits Classifier](https://github.com/eniompw/MLP-Digits-Classifier), extending gradient descent from a single-output linear model to a multi-class neural network.
 
 ## 📚 Contents
