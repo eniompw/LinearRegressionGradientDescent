@@ -1,18 +1,20 @@
 import numpy as np
 
 # Data: 30 points following y = 2x + 50
-n = 30
-x = np.arange(n)
-y = 2 * x + 50
+n_samples = 30
+X = np.arange(n_samples)          # features
+y = 2 * X + 50                    # targets
 
-# Initialise parameters and learning rate
-w, b, lr = 0, 0, 0.0001
+# Parameters and learning rate
+W = 0.0                           # weight
+b = 0.0                           # bias
+learning_rate = 0.0001
 
-for _ in range(50000):
-    y_hat = w * x + b                           # Forward pass: predicted y values
-    dw = -(2/n) * np.sum(x * (y - y_hat))      # Gradient w.r.t. weight
-    db = -(2/n) * np.sum(y - y_hat)            # Gradient w.r.t. bias
-    w -= lr * dw                                # Update weight
-    b -= lr * db                                # Update bias
+for _ in range(50_000):
+    y_pred = W * X + b                          # forward pass
+    dW = -(2 / n_samples) * np.sum(X * (y - y_pred))
+    db = -(2 / n_samples) * np.sum(y - y_pred)
+    W -= learning_rate * dW                     # update weight
+    b -= learning_rate * db                     # update bias
 
-print(f"weight: {w}\nbias: {b}")
+print(f"[Linear]  W: {W:.3f}, b: {b:.3f}")
