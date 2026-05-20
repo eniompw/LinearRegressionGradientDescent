@@ -13,72 +13,69 @@ The code implements a basic machine learning model that learns to fit a linear r
 ```python
 import numpy as np
 
-n = 30              # number of data points
-x = np.arange(n)    # Create x values: [0, 1, 2, ..., 29]
-y = 2 * x + 50      # True relationship: y = 2x + 50
-y = y + np.random.normal(0, 5, n)  # Add random noise to y values
+n_samples = 30              # number of data points
+X = np.arange(n_samples)    # Create X values: [0, 1, 2, ..., 29]
+y = 2 * X + 50              # True relationship: y = 2X + 50
 ```
 
-- **`x`**: Independent variable values (0 to 29)
-- **`y`**: Dependent variable following the linear equation `y = 2x + 50`
-- **Noise**: Gaussian noise (mean=0, std=5) is added to simulate real-world data imperfections
-- Note: n=30 is used because larger values cause overflow during training
+- **`X`**: Independent variable values (0 to 29)
+- **`y`**: Dependent variable following the linear equation `y = 2X + 50`
+- Note: n_samples=30 was found empirically to be enough for the model to reliably recover `W ≈ 2` and `b ≈ 50`
 
 ### 2. Model Initialization
 
 ```python
-w = 0.1   # weight (slope) - initialized to 0.1
-b = 0.01  # bias (intercept) - initialized to 0.01
+W = 0.0   # weight (slope) - initialized to 0
+b = 0.0   # bias (intercept) - initialized to 0
 ```
 
-- **`w`**: Weight parameter that multiplies x (similar to slope in `y = mx + b`)
+- **`W`**: Weight parameter that multiplies X (similar to slope in `y = mx + b`)
 - **`b`**: Bias parameter (similar to intercept)
-- These start with arbitrary small values and will be optimized through training
+- These start at 0 and will be optimized through training
 
 ### 3. Training Configuration
 
 ```python
-lr = 0.0001  # learning rate
+learning_rate = 0.001  # learning rate
 ```
 
 - **Learning rate**: Controls the step size during each parameter update
-- Smaller values (like 0.0001) lead to slower but more stable convergence
+- Smaller values lead to slower but more stable convergence
 - Larger values risk overshooting the optimal solution
 
 ### 4. Gradient Descent Training Loop
 
 ```python
-for i in range(50000):
+for _ in range(10_000):
   # Calculate predictions with current parameters
-  pred = (w * x) + b
+  y_pred = W * X + b
   
-  # Calculate gradients (partial derivatives of loss with respect to w and b)
-  dw = -(2/n) * np.sum(x * (y - pred))
-  db = -(2/n) * np.sum(y - pred)
+  # Calculate gradients (partial derivatives of loss with respect to W and b)
+  dW = -(2/n_samples) * np.sum(X * (y - y_pred))
+  db = -(2/n_samples) * np.sum(y - y_pred)
   
   # Update parameters in the direction that reduces loss
-  w = w - lr * dw
-  b = b - lr * db
+  W -= learning_rate * dW
+  b -= learning_rate * db
 ```
 
 **What happens in each iteration:**
 
-1. **Prediction**: `pred = (w * x) + b` generates predictions for all x values using current parameters
-2. **Error Calculation**: `(y - pred)` computes the residual (difference between actual and predicted values)
+1. **Prediction**: `y_pred = W * X + b` generates predictions for all X values using current parameters
+2. **Error Calculation**: `(y - y_pred)` computes the residual (difference between actual and predicted values)
 3. **Gradient Calculation**:
-   - `dw`: Gradient with respect to weight (how much w needs to change)
+   - `dW`: Gradient with respect to weight (how much W needs to change)
    - `db`: Gradient with respect to bias (how much b needs to change)
-   - The formula `-(2/n)` represents the derivative of Mean Squared Error (MSE) loss
-4. **Parameter Update**: Subtract (learning rate × gradient) from each parameter to move toward lower loss
+   - The formula `-(2/n_samples)` represents the derivative of Mean Squared Error (MSE) loss
+4. **Parameter Update**: Subtract (learning_rate × gradient) from each parameter to move toward lower loss
 
 ### 5. Results
 
 ```python
-print("weight:" , w)
-print("bias:" , b)
+print(f"[Linear]  W: {W:.3f}, b: {b:.3f}")
 ```
 
-After 50,000 iterations, the trained parameters should approximate:
+After 10,000 iterations, the trained parameters should approximate:
 - **weight ≈ 2** (close to the true slope)
 - **bias ≈ 50** (close to the true intercept)
 
@@ -93,9 +90,19 @@ Think of it like walking down a hill in the fog—you can only feel the ground b
 
 ## Expected Behavior
 
-- **Early iterations**: Large changes in w and b as the model adjusts from random initialization
+- **Early iterations**: Large changes in `W` and `b` as the model adjusts from initialisation
 - **Later iterations**: Smaller changes as the model converges toward optimal values
-- **Final result**: w ≈ 2 and b ≈ 50, successfully learning the underlying linear relationship despite noise
+- **Final result**: `W ≈ 2` and `b ≈ 50`, successfully learning the underlying linear relationship
+
+## Notes
+
+> **Note 1:** The `30` data points were found empirically to be enough for the model to reliably recover `W ≈ 2` and `b ≈ 50`.
+>
+> **Note 2:** Removing the learning rate (`learning_rate`) causes `dW` and `db` to explode, resulting in `y_pred` becoming `NaN` and training failing completely.
+>
+> **Note 3:** The learning rate (`0.001`) and number of epochs (`10,000`) were found empirically — small changes to either can cause the model to converge too slowly or diverge entirely.
+>
+> **Note 4:** The [Linear Regression Normalised](./linreg_gd_norm.py) example normalises the inputs for more stable convergence, reducing sensitivity to the choice of learning rate.
 
 ## Potential Improvements
 
