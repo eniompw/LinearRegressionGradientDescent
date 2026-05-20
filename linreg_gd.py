@@ -11,10 +11,10 @@ b = 0.0                           # bias
 learning_rate = 0.0001
 
 for _ in range(50_000):
-    y_pred = W * X + b                          # forward pass
+    y_pred = W * X + b             # forward pass
     dW = -(2 / n_samples) * np.sum(X * (y - y_pred))
     db = -(2 / n_samples) * np.sum(y - y_pred)
-    W -= learning_rate * dW                     # update weight
-    b -= learning_rate * db                     # update bias
+    W -= learning_rate * dW        # update weight
+    b -= learning_rate * db        # update bias
 
 print(f"[Linear]  W: {W:.3f}, b: {b:.3f}")
