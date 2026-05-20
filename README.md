@@ -16,17 +16,19 @@ No deep learning frameworks — just NumPy and a clean implementation of forward
 ## How It Works
 
 1. **Data** — Generates 30 points following `y = 2x + 50` using `np.arange`.
-2. **Initialisation** — Weight `w` and bias `b` start at 0; learning rate `lr = 0.0001`.
+2. **Initialisation** — Weight `w` and bias `b` start at 0; learning rate `lr = 0.001`.
 3. **Forward pass** — Computes predictions: `y_hat = w * x + b`.
 4. **Gradients** — Calculates partial derivatives of Mean Squared Error (MSE) loss with respect to `w` and `b`.
 5. **Update** — Subtracts `lr * gradient` from each parameter, nudging them toward lower loss.
-6. **Result** — After 50,000 epochs, the model recovers `w ≈ 2` and `b ≈ 50`.
+6. **Result** — After 10,000 epochs, the model recovers `w ≈ 2` and `b ≈ 50`.
 
 See [linreg_notes.md](./linreg_notes.md) for a detailed breakdown of the math and code.
 
 > **Note 1:** Removing the learning rate (`lr`) causes `dw` and `db` to explode, resulting in `y_hat` becoming `NaN` and training failing completely.
 >
-> **Note 2:** Normalising the inputs reduces the required epochs from 50,000 to 1,000, making training 50x faster.
+> **Note 2:** Normalising the inputs allows for more stable convergence, reducing sensitivity to the choice of learning rate.
+>
+> **Note 3:** The learning rate and number of epochs were found empirically — small changes to either can cause the model to converge too slowly or diverge entirely.
 
 ## 🛠️ Key Libraries
 

@@ -8,9 +8,9 @@ y = 2 * X + 50                    # targets
 # Parameters and learning rate
 W = 0.0                           # weight
 b = 0.0                           # bias
-learning_rate = 0.0001
+learning_rate = 0.001
 
-for _ in range(50_000):
+for _ in range(10_000):
     y_pred = W * X + b             # forward pass
     dW = -(2 / n_samples) * np.sum(X * (y - y_pred))
     db = -(2 / n_samples) * np.sum(y - y_pred)
