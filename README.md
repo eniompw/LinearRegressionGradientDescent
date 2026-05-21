@@ -38,7 +38,8 @@ See [linreg_notes.md](./linreg_notes.md) for a detailed breakdown of the math an
 
 ## 🔗 References
 
-* [Regression from Scratch Example](https://web.archive.org/web/20240301022512/https://www.kaggle.com/code/aakashns/pytorch-basics-linear-regression-from-scratch) (Kaggle)
+* [Boston Housing](https://github.com/eniompw/BostonHousing) - Practical real-life example applying linear regression with gradient descent on a well-known dataset.
+* [Regression from Scratch Example](https://web.archive.org/web/20230403152706/https://aakashns.medium.com/linear-regression-with-pytorch-3dde91d60b50) (Medium)
 * [Gradient Descent in Python](https://www.geeksforgeeks.org/how-to-implement-a-gradient-descent-in-python-to-find-a-local-minimum) (GeeksforGeeks)
 * [Gradient Derivative Calculation](https://web.archive.org/web/20220419231100/https://towardsdatascience.com/gradient-descent-from-scratch-e8b75fa986cc?gi=2fc7792409a4) (Towards Data Science)
 
