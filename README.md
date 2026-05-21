@@ -14,7 +14,7 @@ No deep learning frameworks — just NumPy and a clean implementation of forward
 
 * [Gradient Descent Animation](./linreg_gd_anim.ipynb) - Animated visualisation of the regression line converging over training epochs.
 
-![Gradient Descent Animation](./Gradient_Descent.gif)
+![Gradient Descent Animation](./linreg_gd_anim.gif)
 * [Linear Regression Normalised](./linreg_gd_norm.py) - Implementation with normalized inputs for more stable and faster convergence.
 
 ## How It Works
@@ -32,7 +32,7 @@ See [linreg_notes.md](./linreg_notes.md) for a detailed breakdown of the math an
 >
 > **Note 2:** Removing the learning rate (`learning_rate`) causes `dW` and `db` to explode, resulting in `y_pred` becoming `NaN` and training failing completely.
 >
-> **Note 3:** For the [Linear Regression Gradient Descent](./linreg_gd.py) example, the learning rate (`0.001`) and number of epochs (`10,000`) were found empirically — small changes to either can cause the model to converge too slowly or diverge entirely.
+> **Note 3:** For the [Linear Regression Gradient Descent](./linreg_gd.py) example, themv Gradient_Descent.gif linreg_gd_anim.gifmv Gradient_Descent.gif linreg_gd_anim.gif learning rate (`0.001`) and number of epochs (`10,000`) were found empirically — small changes to either can cause the model to converge too slowly or diverge entirely.
 >
 > **Note 4:** The [Linear Regression Normalised](./linreg_gd_norm.py) example normalises the inputs for more stable convergence, reducing sensitivity to the choice of learning rate. This allows a much lower learning rate of `0.1` and only `20` epochs to converge.
 
