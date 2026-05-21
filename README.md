@@ -11,6 +11,8 @@ No deep learning frameworks — just NumPy and a clean implementation of forward
 * [Gradient Descent from Scratch](./linreg_gd.ipynb) - Jupyter Notebook exploring the implementation step-by-step.
 * [Linear Regression Explanation](./linreg_notes.md) - Detailed explanation of the underlying gradient descent code and math.
 * [Linear Regression Gradient Descent](./linreg_gd.py) - Basic Python implementation using raw inputs.
+
+![Gradient Descent Animation](./Gradient_Descent.gif)
 * [Linear Regression Normalised](./linreg_gd_norm.py) - Implementation with normalized inputs for more stable and faster convergence.
 
 ## How It Works
