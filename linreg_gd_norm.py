@@ -10,9 +10,9 @@ X_norm = (X - X.mean()) / X.std()
 y_norm = (y - y.mean()) / y.std()
 
 # Initialise parameters and learning rate
-W, b, learning_rate = 0, 0, 0.001
+W, b, learning_rate = 0, 0, 0.1
 
-for _ in range(10_000):
+for _ in range(20):
     y_pred = W * X_norm + b                                       # Forward pass: predicted y values
     dW = -(2/n_samples) * np.sum(X_norm * (y_norm - y_pred))     # Gradient w.r.t. weight
     db = -(2/n_samples) * np.sum(y_norm - y_pred)                 # Gradient w.r.t. bias
