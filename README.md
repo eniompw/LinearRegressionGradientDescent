@@ -17,6 +17,8 @@ No deep learning frameworks — just NumPy and a clean implementation of forward
 ![Gradient Descent Animation](./linreg_gd_anim.gif)
 * [Linear Regression Normalised](./linreg_gd_norm.py) - Implementation with normalized inputs for more stable and faster convergence.
 
+* [Linear Regression - Ames Housing](./linreg_ames.ipynb) - Real-life example applying linear regression with gradient descent on the Ames Housing dataset (predicting sale price from living area).
+
 ## How It Works
 
 1. **Data** — Generates 30 points following `y = 2x + 50` using `np.arange`.
